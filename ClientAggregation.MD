@@ -16,7 +16,6 @@
       - [Setup Windows App](#setup-windows-app)
       - [Configure Deployment Server](#configure-deployment-server)
         - [Restart Splunk](#restart-splunk)
-  - [Created by](#created-by)
 
 ## Purpose
 
@@ -624,6 +623,3 @@ systemctl restart Splunkd.service
 
 ---
 
-## Created by
-
-Christopher J. Tarricone chris at MyCompany dot edu 01-02-2024

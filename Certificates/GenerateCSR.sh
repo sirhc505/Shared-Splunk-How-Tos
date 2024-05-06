@@ -87,10 +87,7 @@ subjectAltName = @alt_names
 
 [alt_names]
 DNS.1 = $DNS_COMMON_NAME
-DNS.1 = $SHORT_HOST-user.its.uconn.edu
-DNS.2 = $SHORT_HOST-mgmt.its.uconn.edu
-DNS.3 = $SHORT_HOST-ring.its.uconn.edu
-DNS.4 = $SHORT_HOST-mgmt.grove.ad.uconn.edu
+DNS.2 = $SHORT_HOST.mycompany.com
 " > $OPENSSL_CONFIG
 
 $OPENSSL req -new -config $OPENSSL_CONFIG -keyout $CERT_KEY -out $CERT_REQ -nodes

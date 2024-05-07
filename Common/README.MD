@@ -160,8 +160,8 @@ path=/opt/splunk/var/lib/summary
 repFactor  = auto
 homePath   = volume:hot/thisismyindex/db
 coldPath   = volume:cold/thisismyindex/db
-thawedPath = /opt/splunk/var/lib/thawed/thisismyindex_thawed/thaweddb
-summaryHomePath = volume:summary/thisismyindex_summary/db
+thawedPath = /opt/splunk/var/lib/thawed/thisismyindex/thaweddb
+summaryHomePath = volume:summary/thisismyindex/db
 
 ```
 

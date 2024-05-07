@@ -165,3 +165,6 @@ summaryHomePath = volume:summary/thisismyindex/db
 
 ```
 
+---
+
+By Chris T

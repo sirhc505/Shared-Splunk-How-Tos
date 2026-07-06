@@ -1,10 +1,10 @@
 #!/usr/bin/bash
 #############################################################################
-# Filename: create-scality-csrs.sh
+# Filename: GenerateCSR.sh
 #############################################################################
 # Purpose:
-#   This script can be run from Satellite to generate certificates for the
-#   Scality storage nodes.
+#   This script can be run from Satellite CSRs for Splunk nodes. Regardless 
+#   host or UF status. This will only generate the CSR. There are 
 #############################################################################
 
 #############################################################################
@@ -68,6 +68,10 @@ OPENSSL="/usr/bin/openssl"
 
 mkdir $OPENSSL_CERT_DIR
 cd $OPENSSL_CERT_DIR
+
+#############################################################################
+#                 DO NOT CHANGE ANYTHING BELOW THESE LINES
+#############################################################################
 
 #############################################################################
 # This will create the configuration that the Certificates will use by

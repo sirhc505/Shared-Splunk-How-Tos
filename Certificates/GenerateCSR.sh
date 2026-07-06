@@ -17,6 +17,16 @@ localityName="My_Town_Name"
 organizationName="My_Organization"
 organizationalUnitName="My_Department"
 emailAddress="security@mycompany.com"
+companyFqdn="mycompany.com"
+
+#############################################################################
+# Only uncomment below when you are using self signed certificates. Most 
+# public will not allow you to use localhost or in many cases ANY IP address
+# that it cannot validate as owned by the target entity. Since 127/8 is non-
+# private. It will not validate and the cert will not be generated.
+#############################################################################
+# localhostDns="DNS.3 = localhost"
+# locahostIp="IP.1 = 127.0.0.1"
 
 #############################################################################
 # Set your encryption bits. Valid levels can vary but most support 2048 and 
@@ -87,7 +97,9 @@ subjectAltName = @alt_names
 
 [alt_names]
 DNS.1 = $DNS_COMMON_NAME
-DNS.2 = $SHORT_HOST.mycompany.com
+DNS.2 = $SHORT_HOST.$companyFqdn
+$localhostDns
+$locahostIp
 " > $OPENSSL_CONFIG
 
 $OPENSSL req -new -config $OPENSSL_CONFIG -keyout $CERT_KEY -out $CERT_REQ -nodes
